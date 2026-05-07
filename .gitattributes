@@ -24,3 +24,15 @@
 # Linguist overrides — exclude generated/vendored from language stats
 docs/research/* linguist-documentation
 *.md linguist-documentation
+
+# Archivos a cifrar con git-crypt
+secrets/** filter=git-crypt diff=git-crypt
+.agent/** filter=git-crypt diff=git-crypt
+.agents/** filter=git-crypt diff=git-crypt
+.windsurf/** filter=git-crypt diff=git-crypt
+.claude/** filter=git-crypt diff=git-crypt
+.mcp.json filter=git-crypt diff=git-crypt
+**/.gitkeep !filter !diff
+*.key filter=git-crypt diff=git-crypt
+*.env.production filter=git-crypt diff=git-crypt
+*.env.*.local filter=git-crypt diff=git-crypt
