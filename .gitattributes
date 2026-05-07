@@ -27,12 +27,10 @@ docs/research/* linguist-documentation
 
 # Archivos a cifrar con git-crypt
 secrets/** filter=git-crypt diff=git-crypt
-.agent/** filter=git-crypt diff=git-crypt
-.agents/** filter=git-crypt diff=git-crypt
-.windsurf/** filter=git-crypt diff=git-crypt
-.claude/** filter=git-crypt diff=git-crypt
 .mcp.json filter=git-crypt diff=git-crypt
-**/.gitkeep !filter !diff
 *.key filter=git-crypt diff=git-crypt
 *.env.production filter=git-crypt diff=git-crypt
 *.env.*.local filter=git-crypt diff=git-crypt
+**/.gitkeep !filter !diff
+# .claude/rules/ is NOT encrypted — rules must be readable without git-crypt
+.claude/rules/** !filter !diff
